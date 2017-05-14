@@ -26,12 +26,13 @@ The following wikipedia page for the GGH cryptosystem helped us understand how t
  In order for the program to complete its run, the input must be as long as the security parameter.
  
  Output: The program will output several items:
-*Private Key
-*Public Key
-*Encoded Text ( Base-64)
-*Cypher Vector
-*Decrypted Vector
-*Your decrypted message
+ 
+* Private Key
+* Public Key
+* Encoded Text ( Base-64)
+* Cypher Vector
+* Decrypted Vector
+* Your decrypted message
 
 ## The Method
 In order for our system to be able to send messages to users, it must be able to generate different keys each time a message is sent. This would improve security greatly, and remove any threats of analysis. In order to generate a private basis, the system must abide by one guideline for the GGH cryptosystem. The private basis for the system must be very close to being or completely orthogonal. In the following code provided, there is a commented out section(lines 7-15) of what was an attempt to achieve a perfectly orthogonal basis. The code will generate a random nxn matrix using the Numpy module and compute its Hadamard ratio. If the ratio found is fairly large, then the lattice that was generated was a "good basis”. 
